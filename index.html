@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fresh Veggies Market</title>
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #f8f8f8; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    header { background: #4CAF50; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { color: #fff; font-size: 1.5rem; }
+    nav ul { list-style: none; display: flex; gap: 1rem; }
+    nav a { color: #fff; font-weight: bold; }
+    .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .menu-toggle span { width: 25px; height: 3px; background: #fff; }
+
+    /* Hero Section */
+    .hero { background: url('https://source.unsplash.com/1600x600/?vegetables,farm') no-repeat center/cover; height: 60vh; display: flex; align-items: center; justify-content: center; }
+    .hero .overlay { background: rgba(0,0,0,0.5); padding: 2rem; border-radius: 8px; text-align: center; }
+    .hero h2 { color: #fff; font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .hero p { color: #ddd; font-size: 1.1rem; }
+
+    /* Sections */
+    section { padding: 2rem; }
+    .container { max-width: 1200px; margin: auto; padding: 0 1rem; }
+
+    /* Products Grid */
+    .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; }
+    .product { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .product img { width: 100%; height: 180px; object-fit: cover; }
+    .product .info { padding: 1rem; }
+    .product .info h3 { margin-bottom: 0.5rem; font-size: 1.2rem; }
+    .product .info p { margin-bottom: 1rem; }
+    .product button { background: #4CAF50; color: #fff; border: none; padding: 0.6rem 1rem; border-radius: 4px; cursor: pointer; }
+    .product button:hover { background: #45a049; }
+
+    /* About & Testimonials */
+    .about, .testimonials { background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+    .about .content, .testimonials .content { padding: 2rem; }
+    .testimonials .testimonial { margin-bottom: 1.5rem; }
+    .testimonials .testimonial p { font-style: italic; }
+    .testimonials .testimonial h4 { text-align: right; margin-top: 0.5rem; }
+
+    /* Contact Form */
+    .contact-form { background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .contact-form .content { padding: 2rem; }
+    .contact-form form { display: grid; gap: 1rem; }
+    .contact-form input,
+    .contact-form textarea { width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; }
+    .contact-form button { background: #4CAF50; color: #fff; border: none; padding: 0.8rem; border-radius: 4px; cursor: pointer; }
+    .contact-form button:hover { background: #45a049; }
+
+    /* Footer */
+    footer { background: #333; color: #ccc; text-align: center; padding: 1rem; }
+    footer a { color: #4CAF50; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul { display: none; flex-direction: column; background: #4CAF50; position: absolute; top: 60px; right: 2rem; width: 200px; }
+      nav ul.active { display: flex; }
+      .menu-toggle { display: flex; }
+      .hero { height: 40vh; }
+      .hero h2 { font-size: 2rem; }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.menu-toggle');
+      const navUl = document.querySelector('nav ul');
+      toggle.addEventListener('click', () => {
+        navUl.classList.toggle('active');
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Care4you Veggies Market</h1>
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="overlay">
+      <h2>Organic Vegetables & Farm Produce</h2>
+      <p>Delivered fresh from our farm to your doorstep.</p>
+    </div>
+  </section>
+
+  <section id="products" class="container products">
+    <!-- Product cards -->
+    <div class="product">
+      <img src="Tomato.jpeg" alt="Tomatoes" />
+      
+      <div class="info">
+        <h3>Fresh Tomatoes</h3>
+        <p>Juicy, ripe, and full of flavor. ₹40/kg</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="Spinach.jpeg" alt="Spinach" />
+      <div class="info">
+        <h3>Organic Spinach</h3>
+        <p>Crisp, green, and nutrient-packed. ₹30/bunch</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="Sukuma wiki.jpeg" alt="Spinach" />
+      <div class="info">
+        <h3>Organic Kale</h3>
+        <p>Crisp, green, and nutrient-packed. ₹30/bunch</p>
+        <button>Add to Cart</button>
+      </div>
+    <div class="product">
+      <img src="Potato.jpeg" alt="Potatoes" />
+      <div class="info">
+        <h3>Potatoes</h3>
+        <p>Perfect for mashing or roasting. ₹25/kg</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="Carrot.jpeg" alt="Carrots" />
+      <div class="info">
+        <h3>Carrots</h3>
+        <p>Sweet and crunchy carrots. ₹35/kg</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="container about">
+    <div class="content">
+      <h2>About Us</h2>
+      <p>At Fresh Veggies Market, we’re passionate about providing the freshest, organically-grown produce directly from our farm to your table. Our sustainable practices ensure nutrient-rich vegetables with minimal environmental impact.</p>
+    </div>
+  </section>
+
+  <section id="testimonials" class="container testimonials">
+    <div class="content">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial">
+        <p>"The produce is incredibly fresh, and I love how it supports sustainable farming practices!"</p>
+        <h4>- Sarah J.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"I’ve never tasted tomatoes this flavorful. Delivery was quick and easy."</p>
+        <h4>- Raj K.</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container contact-form">
+    <div class="content">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Fresh Veggies Market. All rights reserved.</p>
+    <p>Follow us on <a href="#">Instagram</a> and <a href="#">Facebook</a></p>
+  </footer>
+</body>
+</html>
