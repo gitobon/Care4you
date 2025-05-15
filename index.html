@@ -55,9 +55,15 @@
     .contact-form button { background: #4CAF50; color: #fff; border: none; padding: 0.8rem; border-radius: 4px; cursor: pointer; }
     .contact-form button:hover { background: #45a049; }
 
+    /* Policies Section */
+    .policies { background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin: 2rem auto; max-width: 800px; }
+    .policies .content { padding: 2rem; }
+    .policies ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .policies a { color: #4CAF50; font-weight: bold; }
+
     /* Footer */
     footer { background: #333; color: #ccc; text-align: center; padding: 1rem; }
-    footer a { color: #4CAF50; }
+    footer a { color: #4CAF50; margin: 0 0.5rem; }
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -108,7 +114,6 @@
     <!-- Product cards -->
     <div class="product">
       <img src="Tomato.jpeg" alt="Tomatoes" />
-      
       <div class="info">
         <h3>Fresh Tomatoes</h3>
         <p>Juicy, ripe, and full of flavor. ₹40/kg</p>
@@ -181,8 +186,26 @@
     </div>
   </section>
 
+  <section id="policies" class="container policies">
+    <div class="content">
+      <h2>Policies</h2>
+      <ul>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="shipping.html">Shipping Policy</a></li>
+        <li><a href="returns.html">Returns &amp; Refund Policy</a></li>
+        <li><a href="contact.html">Contact Information</a></li>
+      </ul>
+    </div>
+  </section>
+
   <footer>
     <p>© 2025 Fresh Veggies Market. All rights reserved.</p>
+    <p>
+      <a href="terms.html">Terms &amp; Conditions</a> |
+      <a href="shipping.html">Shipping Policy</a> |
+      <a href="returns.html">Returns &amp; Refund Policy</a> |
+      <a href="contact.html">Contact</a>
+    </p>
     <p>Follow us on <a href="#">Instagram</a> and <a href="#">Facebook</a></p>
   </footer>
 </body>
