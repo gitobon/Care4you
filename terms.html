@@ -8,9 +8,34 @@
     body { font-family: Arial, sans-serif; max-width: 800px; margin: 2rem auto; line-height: 1.6; padding: 0 1rem; }
     h1 { color: #4CAF50; }
     a { color: #4CAF50; }
+
+        /* Header */
+    header { background: #4CAF50; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { color: #fff; font-size: 1.5rem; }
+    nav ul { list-style: none; display: flex; gap: 1rem; }
+    nav a { color: #fff; font-weight: bold; }
+    .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .menu-toggle span { width: 20px; height: 3px; background: #fff; }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Care4you Veggies Market</h1>
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
   <h1>Terms &amp; Conditions</h1>
   <p>Welcome to Fresh Veggies Market. By accessing or using our website, you agree to be bound by these Terms &amp; Conditions:</p>
   <ol>
