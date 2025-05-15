@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us — Fresh Veggies Market</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 2rem auto; line-height: 1.6; padding: 0 1rem; }
+    h1 { color: #4CAF50; }
+    form { display: grid; gap: 1rem; }
+    input, textarea { width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; }
+    button { background: #4CAF50; color: #fff; border: none; padding: 0.8rem; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #45a049; }
+  </style>
+</head>
+<body>
+  <h1>Contact Information</h1>
+  <p>You can reach us via phone, email, or the form below:</p>
+  <ul>
+    <li><strong>Phone:</strong> +91‑1234‑567‑890</li>
+    <li><strong>Email:</strong> support@freshveggiesmarket.com</li>
+    <li><strong>Address:</strong> 123 Green Lane, Farmville, YourState, 00000</li>
+  </ul>
+
+  <!-- Example form using Formspree (no backend needed) -->
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="_replyto" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</body>
+</html>
